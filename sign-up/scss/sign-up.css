@@ -1,0 +1,16 @@
+.container .form-container {
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+}
+.container .form-container .home {
+  margin-bottom: 100px;
+}
+.container .form-container .footer {
+  display: flex;
+}
+.container .form-container .checks {
+  margin-top: 5px;
+  font-size: 14px;
+  color: red;
+}/*# sourceMappingURL=sign-up.css.map */

@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.content .main {
+  width: 450px;
+}
+.content .check-username {
+  margin-top: 5px;
+  font-size: 14px;
+  color: red;
+}
+.content .check-pass {
+  margin-top: 5px;
+  font-size: 14px;
+  color: red;
+}/*# sourceMappingURL=sign-in.css.map */

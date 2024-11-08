@@ -1,0 +1,18 @@
+.container {
+  .form-container {
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    .home {
+      margin-bottom: 100px;
+    }
+    .footer {
+      display: flex;
+    }
+    .checks {
+      margin-top: 5px;
+      font-size: 14px;
+      color: red;
+    }
+  }
+}

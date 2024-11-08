@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./scss/my-computer.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- DataTables CSS and JS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css"
+    />
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="page-links mb-3 ms-2">
+      <a href="../index.html" type="button" class="btn btn-warning" id="esas"
+        >Esas sehife</a
+      >
+      <button type="button" class="btn btn-primary" id="showModalBtn">
+        Yeni Komputer
+      </button>
+    </div>
+    <hr />
+
+    <!-- <div class="modall">
+        <div class="modal-back"></div>
+        <div class="modal-container">
+            
+        </div>
+    </div> -->
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-cont">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal Başlığı</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="was-validated">
+                <div class="form-inner">
+                  <div class="left">
+                    <div style="width: 100%" class="col-md-3">
+                      <label for="validationServer04" class="form-label"
+                        >Kategoriya</label
+                      >
+                      <select
+                        style="width: 100%"
+                        class="form-select is-invalid"
+                        id="validationServer04"
+                        aria-describedby="validationServer04Feedback"
+                        required
+                      >
+                        <option>Asus</option>
+                        <option>HP</option>
+                      </select>
+                      <div
+                        id="validationServer04Feedback"
+                        class="invalid-feedback"
+                      >
+                        Please select a valid state.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Ad</label
+                      >
+                      <input
+                        class="form-control ad"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundurr</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Qiymet</label
+                      >
+                      <input
+                        class="form-control qiymet"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Tesvir</label
+                      >
+                      <input
+                        class="form-control tesvir"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Yeni</label
+                      >
+                      <input
+                        class="form-control yeni"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Sekil</label
+                      >
+                      <input
+                        class="form-control shekil"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Emeli yaddas</label
+                      >
+                      <input
+                        class="form-control yaddas"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Merkezi Prosessor</label
+                      >
+                      <input
+                        class="form-control prosessor"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Daimi yaddas</label
+                      >
+                      <input
+                        class="form-control dmyaddas"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div style="width: 100%" class="col-md-3">
+                      <label for="validationServer04" class="form-label"
+                        >Daimi yaddas tipi</label
+                      >
+                      <select
+                        style="width: 100%"
+                        class="form-select is-invalid dmtipi"
+                        id="validationServer04"
+                        aria-describedby="validationServer04Feedback"
+                        required
+                      >
+                        <option>HDD</option>
+                        <option>SSD</option>
+                      </select>
+                      <div
+                        id="validationServer04Feedback"
+                        class="invalid-feedback"
+                      >
+                        Please select a valid state.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Emeliyat sistemi</label
+                      >
+                      <input
+                        class="form-control osystem"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Video kart</label
+                      >
+                      <input
+                        class="form-control videoKart"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                    id="closeBtn"
+                  >
+                    Kapat
+                  </button>
+                  <button
+                    type="submit"
+                    id="submit"
+                    class="btn btn-primary"
+                    id="saveBtn"
+                  >
+                    Kaydet
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <div class="table-content">
+      <table id="myTable" class="table table-dark">
+        <thead>
+          <tr>
+            <th onclick="">ID</th>
+            <th>Ad</th>
+            <th>Sheki</th>
+            <th>qiymet</th>
+            <th>Emeliyatlar</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-cont">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal Başlığı</h5>
+              <button
+                type="button"
+                class="closeEdit"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="was-validated">
+                <div class="form-inner">
+                  <div class="left">
+                    <div style="width: 100%" class="col-md-3">
+                      <label for="validationServer04" class="form-label"
+                        >Kategoriya</label
+                      >
+                      <select
+                        style="width: 100%"
+                        class="form-select is-invalid"
+                        id="validationServer04Edit"
+                        aria-describedby="validationServer04Feedback"
+                        required
+                      >
+                        <option>Asus</option>
+                        <option>HP</option>
+                      </select>
+                      <div
+                        id="validationServer04Feedback"
+                        class="invalid-feedback"
+                      >
+                        Please select a valid state.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Ad</label
+                      >
+                      <input
+                        class="form-control adEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundurr</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Qiymet</label
+                      >
+                      <input
+                        class="form-control qiymetEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Tesvir</label
+                      >
+                      <input
+                        class="form-control tesvirEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Yeni</label
+                      >
+                      <input
+                        class="form-control yeniEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Sekil</label
+                      >
+                      <input
+                        class="form-control shekilEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Emeli yaddas</label
+                      >
+                      <input
+                        class="form-control yaddasEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Merkezi Prosessor</label
+                      >
+                      <input
+                        class="form-control prosessorEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Daimi yaddas</label
+                      >
+                      <input
+                        class="form-control dmyaddasEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div style="width: 100%" class="col-md-3">
+                      <label for="validationServer04" class="form-label"
+                        >Daimi yaddas tipi</label
+                      >
+                      <select
+                        style="width: 100%"
+                        class="form-select is-invalid dmtipiEdit"
+                        id="validationServer04"
+                        aria-describedby="validationServer04Feedback"
+                        required
+                      >
+                        <option>HDD</option>
+                        <option>SSD</option>
+                      </select>
+                      <div
+                        id="validationServer04Feedback"
+                        class="invalid-feedback"
+                      >
+                        Please select a valid state.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Emeliyat sistemi</label
+                      >
+                      <input
+                        class="form-control osystemEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="validationTextarea" class="form-label"
+                        >Video kart</label
+                      >
+                      <input
+                        class="form-control videoKartEdit"
+                        id="validationTextarea"
+                        placeholder="Required example textarea"
+                        required
+                      />
+                      <div class="invalid-feedback">Bos qoymayin</div>
+                      <div class="valid-feedback">Duzgundur</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                    id="closeEdit"
+                  >
+                    Kapat
+                  </button>
+                  <button type="submit" id="submitEdit" class="btn btn-primary">
+                    Kaydet
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

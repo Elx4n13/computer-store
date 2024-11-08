@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../sign-in/scss/sign-in.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="content">
+        <div class="main">
+            <hr>
+            <a href="../index.html" type="button" class="btn btn-warning" id="esas">Esas sehife</a>
+            <hr>
+            <h1 class="mt-3 mb-3">Hesaba daxil olmaq</h1>
+            <form class="was-validated" id="myForm">
+                <div class="col-md-12">
+                    <label for="validationServer01" class="form-label">Istifadəçi adı :</label>
+                    <input type="text" class="form-control is-valid username" id="validationServer01" required>
+                    <div class="check-username">
+                      İstifadəçi adı yazın
+                    </div>
+                  </div>
+            
+                  <div class="col-md-12 mt-3">
+                    <label for="validationServerPassword" class="form-label">Parola</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control is-valid password" id="validationServerPassword" required>
+                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="check-pass">Parol yaz</div>
+                </div>
+                  
+                <div class="mb-3 mt-3">
+                    <button type="submit" class="btn btn-success">Daxil ol</button>
+                </div>
+              </form>
+              <hr>
+              <span>Hesabin yoxdur?</span> <a href="/sign-up/sign-up.html" type="button" class="btn btn-primary">Hesab yarat</a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/b2b9ab2787.js" crossorigin="anonymous"></script>
+    <script src="./script/sign-in.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.modall {
+  width: 70%;
+  background-color: red;
+  height: 500px;
+  margin: auto;
+}
+
+body {
+  background-color: white !important;
+}
+
+.modal-dialog {
+  max-width: 80%;
+}
+
+.form-inner {
+  display: flex;
+}
+
+.left, .right {
+  width: 50%;
+  margin-inline: 10px;
+}
+
+.table-content {
+  width: 70%;
+  margin: auto;
+}
+.table-content table tr td {
+  max-width: 200px !important;
+}
+.table-content table tr td img {
+  width: 100px;
+  height: 70px;
+}
+.table-content table tr td button {
+  width: 80px;
+}
+.table-content table tr td .edit {
+  background-color: blue;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 0px;
+}
+.table-content table tr td .delete {
+  width: 50px;
+  margin-left: 10px;
+  background-color: red;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 0px;
+}/*# sourceMappingURL=my-computer.css.map */

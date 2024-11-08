@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 35%;
+  padding: 10px;
+}
+.left .search input {
+  width: 100%;
+  border: 0;
+}
+.left ul li:hover {
+  background-color: rgb(209, 209, 209);
+}
+.left ul .activee {
+  color: blue;
+  font-weight: 800;
+}
+
+.list-group {
+  width: 100%;
+  margin-top: 30px;
+}
+
+main {
+  display: flex;
+}
+
+.modal-body {
+  text-align: center;
+}
+.modal-body p {
+  text-align: start;
+  margin: 0;
+}
+
+.right {
+  width: 75%;
+  min-width: 75%;
+  background-color: bisque;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.right .card {
+  border-radius: 10px;
+  width: 240px !important;
+  max-width: 250px !important;
+  height: 350px !important;
+  margin: 10px;
+}
+.right .card img {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.right .card p {
+  margin: 0;
+}
+.right .card button {
+  margin: auto;
+  display: block;
+  width: 100px;
+  margin-top: 10px;
+}
+.right .card .small {
+  font-weight: 900;
+}
+
+.modal-dialog {
+  width: 90%;
+  max-width: 90%;
+}
+
+.modal-content {
+  background-color: rgb(138, 209, 216);
+}
+.modal-content h2 {
+  text-align: center;
+}
+
+.modal-body img {
+  width: 200px;
+}
+
+@media screen and (min-width: 900px) {
+  .left {
+    width: 25%;
+  }
+  .right {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}/*# sourceMappingURL=style.css.map */

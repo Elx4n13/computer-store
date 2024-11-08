@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Listings</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./scss/style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Links -->
+    <div class="page-links mb-3 ms-2">
+      <a href="../index.html" class="btn btn-warning" id="esas">Esas sehife</a>
+    </div>
+    <hr />
+
+    <!-- Modal for Detailed View -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Komputer Detalları
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Details will be injected here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="d-flex">
+      <!-- Sidebar with Search and Category Filter -->
+      <aside class="left">
+        <div class="search mb-3">
+          <input
+            type="text"
+            placeholder="Axtaris"
+            class="form-control searchInp"
+          />
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item activee">Acer</li>
+          <li class="list-group-item">Hp</li>
+          <li class="list-group-item">Toshiba</li>
+          <li class="list-group-item">Dell</li>
+          <li class="list-group-item">Lenovo</li>
+          <li class="list-group-item">Asus</li>
+        </ul>
+      </aside>
+
+      <!-- Main Content Area for Cards -->
+      <section class="right p-5">
+        <!-- Cards will be injected here by JavaScript -->
+      </section>
+    </main>
+
+    <!-- Bootstrap and Custom Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
